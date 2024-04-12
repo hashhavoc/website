@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: url('../images/bg.webp') no-repeat center center fixed;
+    background: url('../images/bg.jpg') no-repeat center center fixed;
     background-size: cover;
     text-align: center;
 
@@ -95,9 +95,27 @@ site-header {
     border-radius: 5px; /* Rounded corners */
     font-weight: bold; /* Optional: makes the text bold */
     transition: background-color 0.3s; /* Smooth background color change on hover */
+    margin-right: 10px; /* Adds space to the right of each button */
+
 }
 
 .github-button:hover {
     background-color: #45a049; /* Darker shade on hover */
 }
 
+.responsive-iframe {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 50.125%; /* Adjusted for 16:9 Aspect Ratio at 50% size */
+}
+
+.responsive-iframe iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%; /* Reduced width by 50% */
+    height: 100%; /* Reduced height by 50% */
+    transform: translate(-50%, -50%); /* Center the iframe */
+    padding-bottom: 15px;
+}
